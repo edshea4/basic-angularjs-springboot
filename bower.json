@@ -1,0 +1,22 @@
+{
+  "name": "basic-angularjs-springboot",
+  "authors": [
+    "William Witt <william.witt@mimacom.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.6.9",
+    "bootstrap": "^3.0.0"
+  }
+}
