@@ -6,11 +6,17 @@
     <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
     <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
     <script src="app/app.js"></script>
+    <script src="app/route.js"></script>
+    <script src="app/app-nav/app-nav.component.js"></script>
+    <script src="app/app-main/app-main.component.js"></script>
+    <script src="app/feature/feature.component.js"></script>
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap-theme.css">
 </head>
 <body>
-
+<app-nav></app-nav>
+<ng-view></ng-view>
 </body>
 </html>
