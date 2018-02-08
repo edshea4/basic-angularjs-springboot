@@ -1,9 +1,13 @@
 <div ng-repeat="player in vm.playerList">
-    <h1>{{player.name}}</h1>
-    <h2>{{player.level}}</h2>
-    <h3>{{player.exp}}</h3>
-    <h3>{{player.points}}</h3>
-    <h3>{{player.crafting}}</h3>
-    <h3>{{player.rarecrafting}}</h3>
+    <h1>{{player.username}}</h1>
+    <h2>Level: {{player.level}}</h2>
+    <h3>Exp: {{player.exp}}</h3>
+    <h3>Points: {{player.points}}</h3>
+    <h3>Crafting Material: {{player.crafting}}</h3>
+    <h3>Rare Crafting Material: {{player.rareCrafting}}</h3>
+    <h3>Key: {{player.playerKey}}</h3>
+    <button ng-click = "vm.viewPlayer(player.playerKey)">View Player</button>
     <hr>
 </div>
+<br>
+<button ng-click="vm.buttonToCreate()">Create New Player</button>

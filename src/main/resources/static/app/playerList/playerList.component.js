@@ -1,17 +1,26 @@
 (function() {
     angular.module('app')
-        .component('feature',{
-            templateUrl: "app/feature/feature.tpl.html",
+        .component('playerList',{
+            templateUrl: "app/playerList/playerList.tpl.html",
             controllerAs: "vm",
-            controller: function (helloService) {
+            controller: function ($location ,playerService) {
+
                 var self = this;
 
-                this.name = "feature";
-                this.serviceResponse = null;
+                this.playerList = [];
 
-                helloService.getHello().then(function (data) {
-                    self.serviceResponse = data.hello;
+                playerService.getPlayers().then(function (data) {
+                    self.playerList = data;
                 })
+
+                this.buttonToCreate=function()
+                {
+                    $location.path("/playerCreate");
+                }
+                this.viewPlayer=function(playerKey)
+                {
+                     $location.path("/player/"+playerKey);
+                }
             }
         })
 })();

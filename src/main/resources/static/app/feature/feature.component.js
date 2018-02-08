@@ -11,7 +11,17 @@
 
                 helloService.getHello().then(function (data) {
                     self.serviceResponse = data.hello;
-                })
+                });
+
+                var fooFunction = function(callback, arg){
+                    callback(arg);
+                };
+
+                var callbackFunction = function(argument){
+                    console.log(argument)
+                };
+
+                fooFunction(callbackFunction, "Hello");
             }
         })
 })();

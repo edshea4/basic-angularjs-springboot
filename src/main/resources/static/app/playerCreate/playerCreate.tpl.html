@@ -1,9 +1,19 @@
-<div ng-repeat="player in vm.playerList">
-    <h1>{{player.username}}</h1>
-    <h2>{{player.level}}</h2>
-    <h3>{{player.exp}}</h3>
-    <h3>{{player.points}}</h3>
-    <h3>{{player.crafting}}</h3>
-    <h3>{{player.rarecrafting}}</h3>
-    <hr>
+<div>
+    <form>
+        <label>Player Name</label>
+        <input type="text" ng-model="vm.player.username"><br>
+        <label>Player Key</label>
+        <input type="text" ng-model="vm.player.playerKey"><br>
+        <label>Player Level</label>
+        <input type="text" ng-model="vm.player.level"><br>
+        <label>Player Exp</label>
+        <input type="text" ng-model="vm.player.exp"><br>
+        <label>Points</label>
+        <input type="text" ng-model="vm.player.points"><br>
+        <label>Crafting Material</label>
+        <input type="text" ng-model="vm.player.crafting"><br>
+        <label>Rare Crafting Material</label>
+        <input type="text" ng-model="vm.player.rareCrafting"><br>
+        <button ng-click="vm.savePlayer()">Save Player</button>
+    </form>
 </div>
