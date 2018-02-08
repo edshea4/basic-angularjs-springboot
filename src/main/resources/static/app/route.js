@@ -14,6 +14,9 @@
                 .when("/player/:id",{
                     template: "<player-view></player-view>"
                 })
+                .when("/player/:id/edit",{
+                    template: "<player-edit></player-edit>"
+                })
                 .otherwise({
                     template: "<app-main></app-main>"
                 });

@@ -3,7 +3,7 @@
         .component('playerView',{
             templateUrl: "app/playerView/playerView.tpl.html",
             controllerAs: "vm",
-            controller: function ($routeParams, playerService) {
+            controller: function ($location , $routeParams , playerService) {
 
                 var self = this;
 
@@ -15,7 +15,10 @@
                     .then(function(playerdata) {
                         self.player = playerdata;
                     })
-
+                this.editPlayer=function(playerKey)
+                {
+                    $location.path("/player/"+playerKey+"/edit");
+                }
             }
         })
 

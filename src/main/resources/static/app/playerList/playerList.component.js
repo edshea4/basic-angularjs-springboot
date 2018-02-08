@@ -21,6 +21,7 @@
                 {
                      $location.path("/player/"+playerKey);
                 }
+
             }
         })
 })();
